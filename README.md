@@ -43,7 +43,7 @@ Resolvers tell GraphQL how to fetch data for each field.
 
 #### 1️⃣ Query.fetchPokemon
 
-```javacript
+```javascript
 async fetchPokemon(_, { pokemonName }) {
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
     return response.json()
