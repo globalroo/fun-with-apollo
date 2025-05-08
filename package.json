@@ -1,0 +1,17 @@
+{
+  "name": "fun-with-apollo",
+  "version": "0.0.1",
+  "description": "A quick overview of GraphQL type resolvers",
+  "main": "index.mjs",
+  "scripts": {
+    "start": "node index.mjs"
+  },
+  "author": "@globalroo",
+  "license": "MIT",
+  "dependencies": {
+    "@apollo/server": "^4.12.0",
+    "graphql": "^16.11.0",
+    "graphql-tag": "^2.12.6",
+    "node-fetch": "^3.3.2"
+  }
+}
