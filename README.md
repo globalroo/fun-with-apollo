@@ -14,26 +14,48 @@ This project sets up a GraphQL server using Apollo Server that fetches data from
 
 #### The schema defines:
 - Pokemon type, including:
-- abilities
-- forms
-- Form type, with a nested detail field that fetches additional data
+  - abilities
+  - forms
+- Form type, with a nested detail field that fetches additional data as a type 'FormDetail'
 
 #### Example:
 
 ```graphql
-type Query {
-    fetchPokemon(pokemonName: String!): Pokemon
+type Ability {
+  name: String
+  url: String
 }
 
-type Pokemon {
-    abilities: [Abilities]
-    forms: [Form]
+type Abilities {
+  ability: Ability
+  is_hidden: Boolean
+  slot: Int
+}
+
+type FormDetailSprites {
+  front_default: String
+}
+
+type FormDetail {
+  id: Int
+  is_battle_only: Boolean
+  name: String
+  sprites: FormDetailSprites
 }
 
 type Form {
-    name: String
-    url: String
-    detail: FormDetail
+  name: String
+  url: String
+  detail: FormDetail
+}
+
+type Pokemon {
+  abilities: [Abilities]
+  forms: [Form]
+}
+
+type Query {
+  fetchPokemon(pokemonName: String!): Pokemon
 }
 ```
 ---
