@@ -5,6 +5,11 @@ export const typeDefs = gql`
   type Pokemon {
     name: String
     types: [PokemonType]
+    sprites: Sprite
+  }
+
+  type Sprite {
+    front_default: String
   }
 
   type TypeInfo {

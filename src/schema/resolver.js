@@ -15,6 +15,7 @@ export const resolvers = {
       return {
         name: data.name,
         types: data.types,
+        sprites: data.sprites,
       };
     },
   },
