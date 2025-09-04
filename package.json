@@ -3,8 +3,10 @@
   "version": "0.0.1",
   "description": "A quick overview of GraphQL type resolvers",
   "main": "index.mjs",
+  "type": "module",
   "scripts": {
-    "start": "node index.mjs"
+    "start": "node index.mjs",
+    "dev": "nodemon src/index.mjs"
   },
   "author": "@globalroo",
   "license": "MIT",
@@ -13,5 +15,8 @@
     "graphql": "^16.11.0",
     "graphql-tag": "^2.12.6",
     "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }
